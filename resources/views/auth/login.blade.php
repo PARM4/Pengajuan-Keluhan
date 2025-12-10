@@ -21,9 +21,12 @@
         <a href="{{asset('adminlte/index2.html')}}" class="h1"><b>Akun</b>Login</a>
     </div>
     <div class="card card-outline card-danger">
-    @if (session('failed'))
-        <div class="alert alert-danger">{{session('failed')}}</div>
-    @endif
+      @if (session('success'))
+        <div class="alert alert-success">{{ session('success') }}</div>
+      @endif
+      @if (session('failed'))
+          <div class="alert alert-danger">{{session('failed')}}</div>
+      @endif
     <div class="card-body">
       <p class="login-box-msg">Sign in to start your session</p>
 

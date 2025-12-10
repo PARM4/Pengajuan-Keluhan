@@ -19,7 +19,7 @@
                     <h3 class="card-title">Ajukan Pengaduan Baru</h3>
                 </div>
 
-                <form action="/fitur/pengaduan/store" method="POST" enctype="multipart/form-data">
+                <form action="/fitur/pengaduan" method="POST" enctype="multipart/form-data">
                     @csrf
 
                     <div class="card-body">

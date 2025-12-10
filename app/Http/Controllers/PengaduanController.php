@@ -18,7 +18,7 @@ class PengaduanController extends Controller
         'bukti' => 'nullable|mimes:jpg,jpeg,png,pdf|max:2048'
     ]);
 
-    dd(auth()->id());
+    // dd(auth()->id());
 
 
     // Upload bukti jika ada

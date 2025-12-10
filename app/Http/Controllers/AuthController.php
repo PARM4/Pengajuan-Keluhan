@@ -13,12 +13,18 @@ class AuthController extends Controller
             'email'=>'required|email|max:50',
             'password'=>'required|max:50',
         ]);
-        if(Auth::attempt($request->only('email','password'),$request->remember)){
-            if(Auth::user()->role=='user') return redirect('/home');
-            return redirect('/dashboard');
+
+        if(Auth::attempt($request->only('email','password'), $request->remember)){
+            // Tambahkan pesan sukses sebelum redirect
+            if(Auth::user()->role=='user') {
+                return redirect('/home')->with('success', 'Login berhasil!');
+            }
+            return redirect('/dashboard')->with('success', 'Login berhasil!');
         }
+
         return back()->with('failed','Email atau Password salah');
     }
+
 
     function register(Request $request){
         $request->validate([

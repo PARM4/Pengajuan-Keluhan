@@ -31,7 +31,7 @@ Route::group(['middleware'=>['auth','check_role:user']], function(){
     Route::get('/home',[DashboardController::class, 'home']);    
     Route::get('/contact',fn()=>view('contact'));
     Route::get('/fitur/form-pengaduan',fn()=>view('fitur.form_pengaduan'));
-    Route::post('/fitur/pengaduan/store', [PengaduanController::class, 'store']);
+    Route::post('/fitur/pengaduan', [PengaduanController::class, 'store']);
 
 
 });    

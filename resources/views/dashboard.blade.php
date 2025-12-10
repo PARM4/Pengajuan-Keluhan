@@ -2,6 +2,16 @@
 
 @section('content')
 
+    {{-- @if(session('success'))
+    <div class="alert alert-success alert-dismissible fade show d-flex justify-content-between align-items-center"
+        style="padding: 15px 20px; font-size: 16px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.2); margin-bottom: 20px; background: #28a745; color: #fff;">
+        <span><i class="fas fa-check-circle"></i> {{ session('success') }}</span>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close" style="color:#fff;">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    @endif --}}
+
     <!-- Content Header (Page header) -->
     <div class="content-header">
       <div class="container-fluid">
@@ -27,7 +37,7 @@
           <div class="col-lg-4 col-md-6 col-12">
             <div class="small-box bg-success">
               <div class="inner">
-                <h3>1%</h3>
+                <h3>{{ $jumlahAduan }}</h3> 
                 <p>Aduan</p>
               </div>
               <div class="icon">
@@ -53,7 +63,7 @@
           <div class="col-lg-4 col-md-6 col-12">
             <div class="small-box bg-danger">
               <div class="inner">
-                <h3>0</h3>
+                <h3>{{ $jumlahProses }}</h3>  
                 <p>Proses</p>
               </div>
               <div class="icon">
